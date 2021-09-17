@@ -1,0 +1,41 @@
+:root {
+    --primary:#D4B100
+}
+
+.btn {
+    min-width: 100px;
+    border-radius: 4rem;
+    font-size: 14px ;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer; 
+    padding: 8px 20px; 
+}
+
+.btn--primary {
+    background-color: var(--primary);
+    color:white;
+
+}
+
+.btn--outline {
+    background-color: transparent;
+    color:white;
+    border: 1px solid white   
+}
+
+.btn--medium {
+    font-size: 15px;
+}
+.btn--large {
+    font-size: 20px;
+}
+
+.btn--mobile {
+    text-align: center;
+    border-radius: 4rem;
+    font-size: 14px;
+    border: 1px solid white;
+    background-color: transparent;
+}
