@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link,  NavLink} from 'react-router-dom'
 import {FaBars, FaTimes, } from 'react-icons/fa'
 import {Button} from '../button/Button'
 import Container from 'react-bootstrap/Container'
@@ -85,32 +85,32 @@ export const Navbar = () => {
         <Container>
          <ul className="t-bottom-navbar-container">
          <li className= "nav-item">
-             <Link to='/' className="nav-links">
+             <NavLink to='/' className="nav-links" activeClassName='is-active'>
                Inicio
-            </Link>
+            </NavLink>
            </li>
            <li className= "nav-item">
-             <Link to='/' className="nav-links">
+             <NavLink to='/como-jugar' className="nav-links" activeClassName='is-active'>
                Como jugar
-            </Link>
+            </NavLink>
            </li>
            <li className= "nav-item">
-             <Link to='/' className="nav-links">
+             <NavLink to='/depositos' className="nav-links" activeClassName='is-active'>
                Depositos y reintegros
-            </Link>
+            </NavLink>
            </li>
            <li className= "nav-item">
-           <Link to='/' className="nav-links submenu">
+           <NavLink to='/torneos' className="nav-links submenu" activeClassName='is-active'>
                Torneos
                <div className='t-menu-dropdown'>
                 <Link to='/' className="nav-links">Torneo rápido</Link>
                 <Link to='/' className="nav-links">Torneo semanal</Link>
                 <Link to='/' className="nav-links">Torneo clase A</Link>
                </div>
-            </Link>
+            </NavLink>
            </li>
            <li className= "nav-item" >
-            <Link to='/' className="nav-links submenu">
+            <NavLink to='/partidas' className="nav-links submenu" activeClassName='is-active'>
                Partidas
               <div className='t-menu-dropdown'>
                 <Link to='/' className="nav-links">Partida clásica</Link>
@@ -130,7 +130,7 @@ export const Navbar = () => {
                   </div>
                 </Link>
               </div>
-           </Link>
+           </NavLink>
            </li>
          </ul>
         </Container>

@@ -1,0 +1,30 @@
+.banner-home {
+ width: 100%;
+}
+
+.cards-home{
+ padding-top: 45px;
+ padding-bottom: 45px;
+}
+.cards-home h2 {
+ font-size: 42px;
+}
+
+.cards-home h2,
+.cards-home p{
+ text-align: center;
+}
+
+.title-container {
+    margin-bottom: 35px;
+    margin-top:35px
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .title-container {
+        text-align: center;
+    }
+
+}

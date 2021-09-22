@@ -1,5 +1,6 @@
 :root {
-    --primary:#D4B100
+    --primary:#bb9800;
+    --secondary: #141414
 }
 
 .t-btn {
@@ -18,6 +19,11 @@
 
 .btn--primary {
     background-color: var(--primary);
+    color:white;
+
+}
+.btn--secondary {
+    background-color: var(--secondary);
     color:white;
 
 }
