@@ -1,0 +1,27 @@
+.hero-bg-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.bg-img-container {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+.bg-img-container h2,
+.bg-img-container p {
+    color:white
+}
+.img-right-hero {
+    max-width: 290px;
+}
+
+.col-hero-text {
+    align-self: center;
+}
+.col-hero-img {
+    display: flex;
+    justify-content: flex-end;
+}

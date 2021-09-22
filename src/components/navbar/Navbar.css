@@ -1,4 +1,4 @@
-.navbar {
+.t-navbar {
     background: #141414;
     height: 80px;
     display: flex;
@@ -10,18 +10,16 @@
     z-index: 999;
   }
   
-  .navbar-container {
+  .t-navbar-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
-    max-width: 1500px;
+    width: 100%;
   }
   
   .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -36,33 +34,87 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 60vw;
     justify-content: end;
-    margin-right: 2rem;
+    margin:0
   }
   
-  .nav-item {
-    height: 80px;
-  }
-  
-  .nav-links {
+  .nav-links, .nav-sublinks {
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
+    font-size: 14px;
+    height: auto;
   }
   
-  .nav-links:hover {
-    border-bottom: 4px solid #fff;
+  .nav-links:hover,
+  .nav-sublinks:hover {
+    color:#D4B100;
     transition: all 0.2s ease-out;
   }
+
+  .nav-links.submenu {
+    position:relative
+  }
+  .t-menu-dropdown{
+    display:none
+  }
+  .nav-links.submenu:hover .t-menu-dropdown{
+    position:absolute;
+    background: white;
+    top:37px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    border-radius:2px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+  }
+  .t-menu-dropdown .nav-links, 
+  .t-menu-dropdown .nav-sublinks, 
+  .t-submenu-dropdown .nav-links {
+    color:#242222;
+  }
+  .t-menu-dropdown .nav-links:hover, 
+  .t-menu-dropdown .nav-sublinks:hover, 
+  .t-submenu-dropdown .nav-links:hover {
+   background-color: #f9f9f9;
+  }
   
+  .t-submenu-dropdown {
+    display:none
+  }
+  .nav-sublinks:hover .t-submenu-dropdown {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    background-color: white;
+    top: 0px;
+    height: 100%;
+    min-width: 180px;
+    right: -178px;
+    border-radius:2px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+  }
+ .nav-sublinks::after {
+  border-style: solid;
+	border-width: 1px 1px 0 0;
+	content: '';
+	display: flex;
+	height: 0.45em;
+	right: 0.85em;
+	position: absolute;
+	transform: rotate(45deg);
+	vertical-align: top;
+	width: 0.45em;
+  color:#242222;
+
+ }
   .fa-bars {
     color: #fff;
   }
@@ -75,6 +127,24 @@
     display: none;
   }
   
+  .nav-menu-top-links {
+    display:none
+  }
+  .nav-menu-top-links.active {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .t-bottom-navmenu {
+    background-color: #242222;
+  }
+  ul.t-bottom-navbar-container {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+  
   @media screen and (max-width: 960px) {
     .NavbarItems {
       position: relative;
@@ -83,6 +153,7 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       width: 100%;
       height: 90vh;
       position: absolute;
@@ -98,36 +169,21 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      align-items: center;
     }
   
     .nav-links {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       width: 100%;
       display: table;
     }
   
-    .nav-links:hover {
-      background-color: #fff;
-      color: #242424;
-      border-radius: 0;
-    }
-  
-    .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
-    }
-  
     .menu-icon {
       display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
+      color:white
     }
   
     .fa-times {
@@ -150,9 +206,4 @@
       transition: all 0.3s ease-out;
     }
   
-    .nav-links-mobile:hover {
-      background: #fff;
-      color: #242424;
-      transition: 250ms;
-    }
   }

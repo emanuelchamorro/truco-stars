@@ -2,15 +2,18 @@
     --primary:#D4B100
 }
 
-.btn {
-    min-width: 100px;
+.t-btn {
+    min-width: 110px;
     border-radius: 4rem;
     font-size: 14px ;
     outline: none;
     border: none;
     white-space: nowrap;
     cursor: pointer; 
-    padding: 8px 20px; 
+    padding: 6px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn--primary {
@@ -25,17 +28,14 @@
     border: 1px solid white   
 }
 
-.btn--medium {
-    font-size: 15px;
+.btn--desktop {
+    font-size: 14px;
 }
-.btn--large {
-    font-size: 20px;
-}
+
 
 .btn--mobile {
     text-align: center;
     border-radius: 4rem;
     font-size: 14px;
-    border: 1px solid white;
-    background-color: transparent;
+ 
 }
